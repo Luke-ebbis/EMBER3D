@@ -50,7 +50,7 @@ You can compute structure predictions based on FASTA sequences using
 python predict.py -i <FASTA> -o <OUTPUT_DIRECTORY>
 ```
 
-The ProtT5 protein language model used to generate sequence embeddings will be downloaded on first use (2.3 GB) and stored by default in the directory 'ProtT5-XL-U50'. You can change this directory with the `--t5_model` parameter.
+The ProtT5 protein language model used to generate sequence embeddings will be downloaded on first use (2.3 GB) and stored by default in the directory 'ProtT5-XL-U50'. You can change this directory with the `--t5_dir` parameter.
 By default, the script will produce PDB files and distance maps. You can disable outputs using the parameters `--no-pdb` and `--no-distance-maps` respectively.
 
 Predictions for average-length protein sequences take less than a second, but the initial model loading causes a one-time cost of several seconds (depending on system speed). For efficiency, provide a single FASTA file with multiple sequences instead of calling the script multiple times with single-sequence inputs.
